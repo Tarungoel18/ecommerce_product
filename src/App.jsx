@@ -1,5 +1,6 @@
+import ProductPage from "./pages/product-page";
 function App() {
-  return <></>;
+  return <><ProductPage/></>;
 }
 
 export default App;
