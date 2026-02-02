@@ -4,16 +4,16 @@ import searchImage1 from "../../assets/images/search-img-1.png";
 import authenticatedImage from "../../assets/images/authenticated-img.png";
 const ProductImages = () => {
   return (
-    <div class="col-md-8">
-      <div class="elevate-zoom">
+    <div className="col-md-8">
+      <div className="elevate-zoom">
         <img
           id="img_01"
           src={productImageSmall}
           data-zoom-image={productImage}
-          class="d-dsk"
+          className="d-dsk"
         />
-        <img src={productImage} class="d-mbl" data-zoom-image={productImage} />
-        <div id="gal1" class="d-dsk">
+        <img src={productImage} className="d-mbl" data-zoom-image={productImage} />
+        <div id="gal1" className="d-dsk">
           <a
             href="#"
             data-image={productImageSmall}
@@ -37,9 +37,9 @@ const ProductImages = () => {
           </a>
         </div>
       </div>
-      <div class="authentication-text mt-40 d-dsk">
-        <p class="text-black">Authenticated by:</p>
-        <img src={authenticatedImage} alt="" class="d-block img-fluid" />
+      <div className="authentication-text mt-40 d-dsk">
+        <p className="text-black">Authenticated by:</p>
+        <img src={authenticatedImage} alt="" className="d-block img-fluid" />
       </div>
     </div>
   );

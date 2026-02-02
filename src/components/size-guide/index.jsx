@@ -1,45 +1,45 @@
 const SizeGuide = () => {
   return (
     <>
-      <div class="newsletter fp size-guide" id="size-guide-form">
-        <div class="bg"></div>
-        <div class="center-box">
-          <div class="newsletter-heading">
+      <div className="newsletter fp size-guide" id="size-guide-form">
+        <div className="bg"></div>
+        <div className="center-box">
+          <div className="newsletter-heading">
             <h3>SIZE GUIDE</h3>
-            <button onclick="sizeGuideCloseFunction()" class="btn-blank">
+            <button onclick="sizeGuideCloseFunction()" className="btn-blank">
               <img
                 src="./src/assets/images/icons/Cross-Button.png"
-                class="close-btn-newsletter"
+                className="close-btn-newsletter"
                 alt=""
               />
             </button>
           </div>
-          <div class="newsletter-body">
-            <div class="product-info">
-              <div class="row">
-                <div class="col-12">
-                  <div class="heading bg-light mt-20">
-                    <h4 class="text-black">Men's Clothing Top Wear</h4>
+          <div className="newsletter-body">
+            <div className="product-info">
+              <div className="row">
+                <div className="col-12">
+                  <div className="heading bg-light mt-20">
+                    <h4 className="text-black">Men's Clothing Top Wear</h4>
                   </div>
                 </div>
-                <div class="col-md-5 col-5 mt-25">
+                <div className="col-md-5 col-5 mt-25">
                   <img
                     src="./src/assets/images/product_image.png"
-                    class="img-fluid mx-auto d-block"
+                    className="img-fluid mx-auto d-block"
                     alt=""
                   />
                 </div>
-                <div class="col-md-7 col-7 mt-25">
-                  <div class="text">
-                    <h5 class="text-black text-left">Versache Collection</h5>
-                    <p class="text-left">Orange graphic print polo</p>
+                <div className="col-md-7 col-7 mt-25">
+                  <div className="text">
+                    <h5 className="text-black text-left">Versache Collection</h5>
+                    <p className="text-left">Orange graphic print polo</p>
                   </div>
                 </div>
               </div>
-              <div class="row">
-                <div class="col-md-12">
-                  <div class="table-responsive mt-25">
-                    <table class="table text-center">
+              <div className="row">
+                <div className="col-md-12">
+                  <div className="table-responsive mt-25">
+                    <table className="table text-center">
                       <thead>
                         <tr>
                           <th>Standard</th>
@@ -101,56 +101,56 @@ const SizeGuide = () => {
                     </table>
                   </div>
                 </div>
-                <div class="col-md-6 mx-auto">
+                <div className="col-md-6 mx-auto">
                   <button
                     onclick="sizeGuideFullFunction()"
-                    class="btn-primary mt-20"
+                    className="btn-primary mt-20"
                   >
                     VIEW FULL SIZE GUIDE
                   </button>
                 </div>
               </div>
-              <div class="row">
-                <div class="col-md-10 mx-auto">
-                  <div class="bt-blck"></div>
+              <div className="row">
+                <div className="col-md-10 mx-auto">
+                  <div className="bt-blck"></div>
                 </div>
-                <div class="col-12">
-                  <section class="contact-section">
-                    <div class="container">
-                      <div class="row">
-                        <div class="contact-us-section">
-                          <div class="container-fluid">
-                            <div class="row">
-                              <div class="col-lg-4 col-md-6 col-6">
-                                <div class="content-box">
-                                  <h6 class="text-black">Whatsapp</h6>
+                <div className="col-12">
+                  <section className="contact-section">
+                    <div className="container">
+                      <div className="row">
+                        <div className="contact-us-section">
+                          <div className="container-fluid">
+                            <div className="row">
+                              <div className="col-lg-4 col-md-6 col-6">
+                                <div className="content-box">
+                                  <h6 className="text-black">Whatsapp</h6>
                                   <img
                                     src="./src/assets/images/icons/Whatsapp.svg"
-                                    class="d-block img-fluid mx-auto mb-3"
+                                    className="d-block img-fluid mx-auto mb-3"
                                     alt="Whats App"
                                   />
                                   <p>
                                     <a
                                       href="https://wa.me/+918810420296"
-                                      class="hidden-link"
+                                      className="hidden-link"
                                     >
                                       +91 88104 20296
                                     </a>
                                   </p>
                                 </div>
                               </div>
-                              <div class="col-lg-4 col-md-6 col-6">
-                                <div class="content-box br-none">
-                                  <h6 class="text-black">Email</h6>
+                              <div className="col-lg-4 col-md-6 col-6">
+                                <div className="content-box br-none">
+                                  <h6 className="text-black">Email</h6>
                                   <img
                                     src="./src/assets/images/icons/Email.svg"
-                                    class="d-block img-fluid mx-auto mb-3"
+                                    className="d-block img-fluid mx-auto mb-3"
                                     alt="Whats App"
                                   />
                                   <p>
                                     <a
                                       href="mailto:assistance@darveys.com"
-                                      class="hidden-link"
+                                      className="hidden-link"
                                     >
                                       assistance@darveys.com
                                     </a>
@@ -164,9 +164,9 @@ const SizeGuide = () => {
                     </div>
                   </section>
                 </div>
-                <div class="col-md-8 mx-auto">
-                  <div class="disclaimer-text">
-                    <p class="text-black">
+                <div className="col-md-8 mx-auto">
+                  <div className="disclaimer-text">
+                    <p className="text-black">
                       *Please note the measurements may vary according to
                       different brand and styles.
                     </p>
@@ -178,32 +178,32 @@ const SizeGuide = () => {
         </div>
       </div>
 
-      <div class="newsletter fp size-guide" id="size-guide-full-form">
-        <div class="bg"></div>
-        <div class="center-box">
-          <div class="newsletter-heading">
+      <div className="newsletter fp size-guide" id="size-guide-full-form">
+        <div className="bg"></div>
+        <div className="center-box">
+          <div className="newsletter-heading">
             <h3>VIEW FULL SIZE GUIDE</h3>
-            <button onclick="sizeGuideFullBackFunction()" class="btn-blank">
+            <button onclick="sizeGuideFullBackFunction()" className="btn-blank">
               <img
                 src="./src/assets/images/icons/left-arrow-black.svg"
-                class="back-btn-newsletter"
+                className="back-btn-newsletter"
                 alt=""
               />
             </button>
-            <button onclick="sizeGuideFullCloseFunction()" class="btn-blank">
+            <button onclick="sizeGuideFullCloseFunction()" className="btn-blank">
               <img
                 src="./src/assets/images/icons/Cross-Button.png"
-                class="close-btn-newsletter"
+                className="close-btn-newsletter"
                 alt=""
               />
             </button>
           </div>
-          <div class="newsletter-body">
-            <div class="accordion" id="sizeGuideFullMain">
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="MenSizeGuide">
+          <div className="newsletter-body">
+            <div className="accordion" id="sizeGuideFullMain">
+              <div className="accordion-item">
+                <h2 className="accordion-header" id="MenSizeGuide">
                   <button
-                    class="accordion-button collapsed text-underline"
+                    className="accordion-button collapsed text-underline"
                     type="button"
                     data-bs-toggle="collapse"
                     data-bs-target="#MenSizeGuideCollapse"
@@ -215,16 +215,16 @@ const SizeGuide = () => {
                 </h2>
                 <div
                   id="MenSizeGuideCollapse"
-                  class="accordion-collapse collapse"
+                  className="accordion-collapse collapse"
                   aria-labelledby="MenSizeGuide"
                   data-bs-parent="#sizeGuideFullMain"
                 >
-                  <div class="accordion-body">
-                    <div class="accordion" id="Meninner">
-                      <div class="accordion-item">
-                        <h2 class="accordion-header" id="topwear">
+                  <div className="accordion-body">
+                    <div className="accordion" id="Meninner">
+                      <div className="accordion-item">
+                        <h2 className="accordion-header" id="topwear">
                           <button
-                            class="accordion-button text-grey"
+                            className="accordion-button text-grey"
                             type="button"
                             data-bs-toggle="collapse"
                             data-bs-target="#topwearcollapse"
@@ -236,15 +236,15 @@ const SizeGuide = () => {
                         </h2>
                         <div
                           id="topwearcollapse"
-                          class="accordion-collapse collapse show"
+                          className="accordion-collapse collapse show"
                           aria-labelledby="topwear"
                           data-bs-parent="#Meninner"
                         >
-                          <div class="accordion-body">
-                            <div class="row">
-                              <div class="col-md-12">
-                                <div class="table-responsive mt-25">
-                                  <table class="table text-center">
+                          <div className="accordion-body">
+                            <div className="row">
+                              <div className="col-md-12">
+                                <div className="table-responsive mt-25">
+                                  <table className="table text-center">
                                     <thead>
                                       <tr>
                                         <th>Standard</th>
@@ -310,10 +310,10 @@ const SizeGuide = () => {
                           </div>
                         </div>
                       </div>
-                      <div class="accordion-item">
-                        <h2 class="accordion-header" id="bottomwear">
+                      <div className="accordion-item">
+                        <h2 className="accordion-header" id="bottomwear">
                           <button
-                            class="accordion-button text-grey collapsed"
+                            className="accordion-button text-grey collapsed"
                             type="button"
                             data-bs-toggle="collapse"
                             data-bs-target="#bottomwearcollapse"
@@ -325,15 +325,15 @@ const SizeGuide = () => {
                         </h2>
                         <div
                           id="bottomwearcollapse"
-                          class="accordion-collapse collapse"
+                          className="accordion-collapse collapse"
                           aria-labelledby="bottomwear"
                           data-bs-parent="#Meninner"
                         >
-                          <div class="accordion-body">
-                            <div class="row">
-                              <div class="col-md-12">
-                                <div class="table-responsive mt-25">
-                                  <table class="table text-center">
+                          <div className="accordion-body">
+                            <div className="row">
+                              <div className="col-md-12">
+                                <div className="table-responsive mt-25">
+                                  <table className="table text-center">
                                     <thead>
                                       <tr>
                                         <th>Standard</th>
@@ -399,10 +399,10 @@ const SizeGuide = () => {
                           </div>
                         </div>
                       </div>
-                      <div class="accordion-item">
-                        <h2 class="accordion-header" id="activewear">
+                      <div className="accordion-item">
+                        <h2 className="accordion-header" id="activewear">
                           <button
-                            class="accordion-button collapsed text-grey"
+                            className="accordion-button collapsed text-grey"
                             type="button"
                             data-bs-toggle="collapse"
                             data-bs-target="#activewearcollapse"
@@ -414,15 +414,15 @@ const SizeGuide = () => {
                         </h2>
                         <div
                           id="activewearcollapse"
-                          class="accordion-collapse collapse"
+                          className="accordion-collapse collapse"
                           aria-labelledby="activewear"
                           data-bs-parent="#Meninner"
                         >
-                          <div class="accordion-body">
-                            <div class="row">
-                              <div class="col-md-12">
-                                <div class="table-responsive mt-25">
-                                  <table class="table text-center">
+                          <div className="accordion-body">
+                            <div className="row">
+                              <div className="col-md-12">
+                                <div className="table-responsive mt-25">
+                                  <table className="table text-center">
                                     <thead>
                                       <tr>
                                         <th>Standard</th>
@@ -492,10 +492,10 @@ const SizeGuide = () => {
                   </div>
                 </div>
               </div>
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="WomenSizeGuide">
+              <div className="accordion-item">
+                <h2 className="accordion-header" id="WomenSizeGuide">
                   <button
-                    class="accordion-button collapsed text-underline"
+                    className="accordion-button collapsed text-underline"
                     type="button"
                     data-bs-toggle="collapse"
                     data-bs-target="#WomenSizeGuideCollapse"
@@ -507,12 +507,12 @@ const SizeGuide = () => {
                 </h2>
                 <div
                   id="WomenSizeGuideCollapse"
-                  class="accordion-collapse collapse"
+                  className="accordion-collapse collapse"
                   aria-labelledby="WomenSizeGuide"
                   data-bs-parent="#sizeGuideFullMain"
                 >
-                  <div class="accordion-body">
-                    <p class="text-black">
+                  <div className="accordion-body">
+                    <p className="text-black">
                       Lorem ipsum, dolor sit amet consectetur, adipisicing elit.
                       Magni totam, atque nisi alias illum velit itaque,
                       repudiandae possimus cupiditate voluptas veniam modi,
@@ -533,10 +533,10 @@ const SizeGuide = () => {
                   </div>
                 </div>
               </div>
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="KidsSizeGuide">
+              <div className="accordion-item">
+                <h2 className="accordion-header" id="KidsSizeGuide">
                   <button
-                    class="accordion-button collapsed text-underline"
+                    className="accordion-button collapsed text-underline"
                     type="button"
                     data-bs-toggle="collapse"
                     data-bs-target="#KidsSizeGuideCollapse"
@@ -548,12 +548,12 @@ const SizeGuide = () => {
                 </h2>
                 <div
                   id="KidsSizeGuideCollapse"
-                  class="accordion-collapse collapse"
+                  className="accordion-collapse collapse"
                   aria-labelledby="KidsSizeGuide"
                   data-bs-parent="#sizeGuideFullMain"
                 >
-                  <div class="accordion-body">
-                    <p class="text-black">
+                  <div className="accordion-body">
+                    <p className="text-black">
                       Lorem ipsum, dolor sit amet consectetur, adipisicing elit.
                       Magni totam, atque nisi alias illum velit itaque,
                       repudiandae possimus cupiditate voluptas veniam modi,
@@ -575,13 +575,13 @@ const SizeGuide = () => {
                 </div>
               </div>
             </div>
-            <div class="row">
-              <div class="col-md-10 mx-auto">
-                <div class="bt-blck"></div>
+            <div className="row">
+              <div className="col-md-10 mx-auto">
+                <div className="bt-blck"></div>
               </div>
-              <div class="col-md-8 mx-auto">
-                <div class="disclaimer-text">
-                  <p class="text-black">
+              <div className="col-md-8 mx-auto">
+                <div className="disclaimer-text">
+                  <p className="text-black">
                     *Please note the measurements may vary according to
                     different brand and styles.
                   </p>

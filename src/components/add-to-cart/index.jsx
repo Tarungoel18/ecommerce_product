@@ -1,10 +1,15 @@
-import wishlist from "../../assets/images/icons/wishlist.svg";
+import wishlist from "../../assets/images/icons/wishlist.svg"
 const AddToCart = () => {
   return (
-   
-		<div class="bottom-buttton-prod d-mbl">
-			<button class="btn-primary btn-fw">ADD TO BAG</button>
-		</div>
+    <div className="add-to-cart-btn mt-20">
+      <button className="btn-primary">ADD TO BAG</button>
+      <button className="btn-blank">
+        <img
+          src={wishlist}
+          className="img-fluid mx-auto d-block"
+        />
+      </button>
+    </div>
   );
 };
 

@@ -1,156 +1,79 @@
+import AccordionItem from "../accordian-item";
 const AccordianParent = () => {
+  const accordionData = [
+    {
+      id: "one",
+      heading: "Description",
+      body: (
+        <p>
+          Amp up your wardrobe with this orange classic fit mesh polo from Ralph
+          Lauren crafted in cotton featuring short sleeves, spread collar and
+          button placket.
+        </p>
+      ),
+    },
+    {
+      id: "two",
+      heading: "Delivery Timeline",
+      body: (
+        <>
+          <strong>This is the second item's accordion body.</strong> It is
+          hidden by default, until the collapse plugin adds the appropriate
+          classes that we use to style each element. These classes control the
+          overall appearance, as well as the showing and hiding via CSS
+          transitions. You can modify any of this with custom CSS or overriding
+          our default variables. It's also worth noting that just about any HTML
+          can go within the <code>.accordion-body</code>, though the transition
+          does limit overflow.
+        </>
+      ),
+    },
+    {
+      id: "three",
+      heading: "Authencity Guarantee",
+      body: (
+        <>
+          <strong>This is the second item's accordion body.</strong> It is
+          hidden by default, until the collapse plugin adds the appropriate
+          classes that we use to style each element. These classes control the
+          overall appearance, as well as the showing and hiding via CSS
+          transitions. You can modify any of this with custom CSS or overriding
+          our default variables. It's also worth noting that just about any HTML
+          can go within the <code>.accordion-body</code>, though the transition
+          does limit overflow.
+        </>
+      ),
+    },
+    {
+      id: "four",
+      heading: "Style Code & Color",
+      body: (
+        <div className="style-box">
+          <p>Style Code: &nbsp;&nbsp;106-lot4932</p>
+          <p className="color">
+            Color: &nbsp;&nbsp;
+            <span className="red-box">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+          </p>
+        </div>
+      ),
+    },
+    {
+      id: "five",
+      heading: "5% Cashback",
+      body: <p>Get 5% cashback on prepaid orders.</p>,
+    },
+  ];
+
   return (
-    <div class="accordion mt-30" id="accordionExample">
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingOne">
-          <button
-            class="accordion-button"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#collapseOne"
-            aria-expanded="true"
-            aria-controls="collapseOne"
-          >
-            <b>Description</b>
-          </button>
-        </h2>
-        <div
-          id="collapseOne"
-          class="accordion-collapse collapse show"
-          aria-labelledby="headingOne"
-          data-bs-parent="#accordionExample"
-        >
-          <div class="accordion-body">
-            <p>
-              Amp up your wardrobe with this orange classic fit mesh polo from
-              Ralph Lauren crafted in cotton featuring short sleeves, spread
-              collar and button placket.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingTwo">
-          <button
-            class="accordion-button collapsed"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#collapseTwo"
-            aria-expanded="false"
-            aria-controls="collapseTwo"
-          >
-            <b>Delivery Timeline</b>
-          </button>
-        </h2>
-        <div
-          id="collapseTwo"
-          class="accordion-collapse collapse"
-          aria-labelledby="headingTwo"
-          data-bs-parent="#accordionExample"
-        >
-          <div class="accordion-body">
-            <strong>This is the second item's accordion body.</strong> It is
-            hidden by default, until the collapse plugin adds the appropriate
-            classes that we use to style each element. These classes control the
-            overall appearance, as well as the showing and hiding via CSS
-            transitions. You can modify any of this with custom CSS or
-            overriding our default variables. It's also worth noting that just
-            about any HTML can go within the <code>.accordion-body</code>,
-            though the transition does limit overflow.
-          </div>
-        </div>
-      </div>
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingThree">
-          <button
-            class="accordion-button collapsed"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#collapseThree"
-            aria-expanded="false"
-            aria-controls="collapseThree"
-          >
-            <b>Authencity Guarantee</b>
-          </button>
-        </h2>
-        <div
-          id="collapseThree"
-          class="accordion-collapse collapse"
-          aria-labelledby="headingThree"
-          data-bs-parent="#accordionExample"
-        >
-          <div class="accordion-body">
-            <strong>This is the third item's accordion body.</strong> It is
-            hidden by default, until the collapse plugin adds the appropriate
-            classes that we use to style each element. These classes control the
-            overall appearance, as well as the showing and hiding via CSS
-            transitions. You can modify any of this with custom CSS or
-            overriding our default variables. It's also worth noting that just
-            about any HTML can go within the <code>.accordion-body</code>,
-            though the transition does limit overflow.
-          </div>
-        </div>
-      </div>
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingFour">
-          <button
-            class="accordion-button collapsed"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#collapseFour"
-            aria-expanded="false"
-            aria-controls="collapseFour"
-          >
-            <b>Style Code & Color</b>
-          </button>
-        </h2>
-        <div
-          id="collapseFour"
-          class="accordion-collapse collapse"
-          aria-labelledby="headingFour"
-          data-bs-parent="#accordionExample"
-        >
-          <div class="accordion-body">
-            <div class="style-box">
-              <p>Style Code: &nbsp;&nbsp;106-lot4932</p>
-              <p class="color">
-                Color: &nbsp;&nbsp;
-                <span class="red-box">&nbsp;&nbsp;&nbsp;&nbsp;</span>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingFour">
-          <button
-            class="accordion-button collapsed"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#collapseFour"
-            aria-expanded="false"
-            aria-controls="collapseFour"
-          >
-            <b>5% Cashback</b>
-          </button>
-        </h2>
-        <div
-          id="collapseFour"
-          class="accordion-collapse collapse"
-          aria-labelledby="headingFour"
-          data-bs-parent="#accordionExample"
-        >
-          <div class="accordion-body">
-            <div class="style-box">
-              <p>Style Code: &nbsp;&nbsp;106-lot4932</p>
-              <p class="color">
-                Color: &nbsp;&nbsp;
-                <span class="red-box">&nbsp;&nbsp;&nbsp;&nbsp;</span>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div className="accordion mt-30" id="accordionExample">
+      {accordionData.map((item) => (
+        <AccordionItem
+          key={item.id}
+          id={item.id}
+          heading={item.heading}
+          body={item.body}
+        />
+      ))}
     </div>
   );
 };
