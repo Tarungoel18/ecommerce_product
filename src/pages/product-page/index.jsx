@@ -1,33 +1,40 @@
 import ProductImages from "../../components/product-images";
 import ProductDetails from "../../components/product-details";
-import BreadCrumbs from "../../components/breadcrumbs";
 import AddToCart from "../../components/add-to-cart-mob";
 import SizeGuide from "../../components/size-guide";
 import ProductDetailsMobile from "../../components/product-details-mobile";
 import AccordianParent from "../../components/accordian-parent";
-import { breadcrumbItems } from "../../constants/AppConst";
 import { useState, useEffect } from "react";
-import { getProduct } from "./service";
+import { getProduct } from "./services/getProduct";
 const ProductPage = () => {
   const [product, setProduct] = useState(null);
   const [loading, setIsLoading] = useState(true);
+  const [showSizeGuide, setShowSizeGuide] = useState(false);
+  const [showFullSizeGuide, setShowFullSizeGuide] = useState(false);
+
   useEffect(() => {
     async function getProductDetails() {
       try {
+        var bodyFormData = new FormData();
+        bodyFormData.append("product_id", "88");
         setIsLoading(true);
-        const product = await getProduct();
-        setProduct(product.data);
+        const product = await getProduct(bodyFormData);
+        setProduct(product.data.product);
       } catch (error) {
         console.log(error);
       } finally {
         setIsLoading(false);
       }
     }
-      getProductDetails();
+    getProductDetails();
   }, []);
 
   if (loading) {
-    return <div className="d-flex justify-content-center align-items-center min-vh-100">Loading...</div>;
+    return (
+      <div className="d-flex justify-content-center align-items-center min-vh-100">
+        Loading...
+      </div>
+    );
   }
   if (!product) {
     return <div className="col-md-4">Product not found</div>;
@@ -35,29 +42,15 @@ const ProductPage = () => {
 
   return (
     <>
-      <div id="header_mobile_inner_ct" className="d-mbl"></div>
-      <div id="header" className="d-dsk"></div>
-
-      <div className="clearfix"></div>
-
-      <BreadCrumbs items={breadcrumbItems} />
-
       <section className="products-main">
         <div className="container-fluid">
           <div className="row">
-            <ProductImages url={product?.images[0]} />
+            <ProductImages url={product?.images[0]?.src} />
             <ProductDetails
-              title={product?.title}
-              description={product?.description}
-              price={product?.price}
-              discountPercentage={product?.discountPercentage}
+              product={product}
+              setShowSizeGuide={setShowSizeGuide}
             />
-            <ProductDetailsMobile
-              title={product?.title}
-              description={product?.description}
-              price={product?.price}
-              discountPercentage={product?.discountPercentage}
-            />
+            <ProductDetailsMobile product={product} />
             <div className="col-12">
               {/* <!-- PRODUCTS-MAIN STARTS --> */}
               <section className="products-main mt-25 d-mbl">
@@ -113,9 +106,19 @@ const ProductPage = () => {
 
       <div className="clearfix"></div>
 
-      <AddToCart />
+      <AddToCart product={product} />
 
-      <SizeGuide />
+      <SizeGuide
+        isOpen={showSizeGuide}
+        onClose={() => setShowSizeGuide(false)}
+        onOpenFullGuide={() => {
+          setShowSizeGuide(false);
+          setShowFullSizeGuide(true);
+        }}
+        onCloseFullGuide={() => setShowFullSizeGuide(false)}
+        showFullSizeGuide={showFullSizeGuide}
+        setShowSizeGuide={setShowSizeGuide}
+      />
     </>
   );
 };

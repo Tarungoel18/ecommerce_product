@@ -1495,6 +1495,9 @@ h6.primary-address-heading{
 #recent-viewed_1 .product-box, #also-like .product-box{
 	border: 1px solid #e2e2e2;
 }
+.newsletter.size-guide {
+	display: block;
+}
 .newsletter.size-guide .newsletter-body{
 	overflow: hidden;
 	max-height: 600px;

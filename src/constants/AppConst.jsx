@@ -62,3 +62,5 @@ export const accordionData = [
     body: <p>Get 5% cashback on prepaid orders.</p>,
   },
 ];
+
+export const sessionID = "sessionID";

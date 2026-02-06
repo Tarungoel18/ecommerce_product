@@ -1,3 +1,6 @@
+import { Link } from "react-router-dom";
+import { ROUTES } from "../../constants/routes";
+
 const BreadCrumb = ({ items = [] }) => {
   return (
     <section className="mt-10">
@@ -8,7 +11,7 @@ const BreadCrumb = ({ items = [] }) => {
               <ul>
                 {items.map((item, index) => (
                   <li key={index}>
-                    <a href="#">{item}</a>
+                    <Link to={ROUTES.HOME}>{item}</Link>
                   </li>
                 ))}
               </ul>
