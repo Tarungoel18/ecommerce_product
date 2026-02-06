@@ -5,7 +5,9 @@ import AddToCart from "../../components/add-to-cart-mob";
 import SizeGuide from "../../components/size-guide";
 import ProductDetailsMobile from "../../components/product-details-mobile";
 import AccordianParent from "../../components/accordian-parent";
+import { breadcrumbItems } from "../../constants/AppConst";
 const ProductPage = () => {
+
   return (
     <>
       <div id="header_mobile_inner_ct" className="d-mbl"></div>
@@ -13,7 +15,7 @@ const ProductPage = () => {
 
       <div className="clearfix"></div>
 
-      <BreadCrumbs />
+      <BreadCrumbs items={breadcrumbItems} />
 
       <section className="products-main">
         <div className="container-fluid">

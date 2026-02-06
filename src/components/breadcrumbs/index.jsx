@@ -1,4 +1,4 @@
-const BreadCrumb = () => {
+const BreadCrumb = ({ items = [] }) => {
   return (
     <section className="mt-10 d-dsk">
       <div className="container-fluid">
@@ -6,13 +6,11 @@ const BreadCrumb = () => {
           <div className="col-md-12">
             <div className="breadcrumb">
               <ul>
-                <li>Home</li>
-                <li>
-                  <a href="#">Men</a>
-                </li>
-                <li>
-                  <a href="#">Clothing</a>
-                </li>
+                {items.map((item, index) => (
+                  <li key={index}>
+                    <a href="#">{item}</a>
+                  </li>
+                ))}
               </ul>
             </div>
           </div>
