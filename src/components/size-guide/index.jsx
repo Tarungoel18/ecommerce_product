@@ -6,7 +6,7 @@ const SizeGuide = () => {
         <div className="center-box">
           <div className="newsletter-heading">
             <h3>SIZE GUIDE</h3>
-            <button onclick="sizeGuideCloseFunction()" className="btn-blank">
+            <button  className="btn-blank">
               <img
                 src="./src/assets/images/icons/Cross-Button.png"
                 className="close-btn-newsletter"
@@ -103,7 +103,6 @@ const SizeGuide = () => {
                 </div>
                 <div className="col-md-6 mx-auto">
                   <button
-                    onclick="sizeGuideFullFunction()"
                     className="btn-primary mt-20"
                   >
                     VIEW FULL SIZE GUIDE
@@ -183,14 +182,14 @@ const SizeGuide = () => {
         <div className="center-box">
           <div className="newsletter-heading">
             <h3>VIEW FULL SIZE GUIDE</h3>
-            <button onclick="sizeGuideFullBackFunction()" className="btn-blank">
+            <button  className="btn-blank">
               <img
                 src="./src/assets/images/icons/left-arrow-black.svg"
                 className="back-btn-newsletter"
                 alt=""
               />
             </button>
-            <button onclick="sizeGuideFullCloseFunction()" className="btn-blank">
+            <button className="btn-blank">
               <img
                 src="./src/assets/images/icons/Cross-Button.png"
                 className="close-btn-newsletter"

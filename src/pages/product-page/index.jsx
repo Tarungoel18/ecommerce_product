@@ -6,7 +6,32 @@ import SizeGuide from "../../components/size-guide";
 import ProductDetailsMobile from "../../components/product-details-mobile";
 import AccordianParent from "../../components/accordian-parent";
 import { breadcrumbItems } from "../../constants/AppConst";
+import { useState, useEffect } from "react";
+import { getProduct } from "./service";
 const ProductPage = () => {
+  const [product, setProduct] = useState(null);
+  const [loading, setIsLoading] = useState(true);
+  useEffect(() => {
+    async function getProductDetails() {
+      try {
+        setIsLoading(true);
+        const product = await getProduct();
+        setProduct(product.data);
+      } catch (error) {
+        console.log(error);
+      } finally {
+        setIsLoading(false);
+      }
+    }
+      getProductDetails();
+  }, []);
+
+  if (loading) {
+    return <div className="d-flex justify-content-center align-items-center min-vh-100">Loading...</div>;
+  }
+  if (!product) {
+    return <div className="col-md-4">Product not found</div>;
+  }
 
   return (
     <>
@@ -20,9 +45,19 @@ const ProductPage = () => {
       <section className="products-main">
         <div className="container-fluid">
           <div className="row">
-            <ProductImages />
-            <ProductDetails />
-            <ProductDetailsMobile/>
+            <ProductImages url={product?.images[0]} />
+            <ProductDetails
+              title={product?.title}
+              description={product?.description}
+              price={product?.price}
+              discountPercentage={product?.discountPercentage}
+            />
+            <ProductDetailsMobile
+              title={product?.title}
+              description={product?.description}
+              price={product?.price}
+              discountPercentage={product?.discountPercentage}
+            />
             <div className="col-12">
               {/* <!-- PRODUCTS-MAIN STARTS --> */}
               <section className="products-main mt-25 d-mbl">
@@ -36,7 +71,7 @@ const ProductPage = () => {
                           </div>
                         </div>
                         <div className="accordion mt-20" id="accordionExample">
-                         <AccordianParent/>
+                          <AccordianParent />
                         </div>
                       </div>
                     </div>

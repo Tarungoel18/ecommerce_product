@@ -1,19 +1,17 @@
 import ShareIcon from "../../assets/images/icons/Share-Icon.png"
-const ProductDetailsMobile = () => {
+const ProductDetailsMobile = ({title,description,price,discountPercentage}) => {
   return (
 <div className="col-12 p-0">
               <section className="product-name bg-mobile-light mt-sm-20 text-center d-mbl">
                 <div className="container-fluid">
                   <div className="row">
-                    <h3 className="text-black">Ralph Lauren</h3>
-                    <p className="desc-text">Aqua classNameic fit mesh polo</p>
+                    <h3 className="text-black">{title}</h3>
+                    <p className="desc-text">{description}</p>
                     <p className="text">
-                      <i className="fas fa-rupee-sign"></i> <del>14,500</del>
-                      &nbsp;
                       <span className="text-black">
-                        <i className="fas fa-rupee-sign"></i> 8,950
+                        <i className="fas fa-rupee-sign"></i> ${price}
                       </span>
-                      <span className="text-error">(83%)</span>
+                      <span className="text-error">({discountPercentage}%)</span>
                     </p>
                     <span className="text-black">
                       Incl. GST & Duties, EMI starts @{" "}

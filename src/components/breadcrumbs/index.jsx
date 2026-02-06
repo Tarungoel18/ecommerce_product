@@ -1,6 +1,6 @@
 const BreadCrumb = ({ items = [] }) => {
   return (
-    <section className="mt-10 d-dsk">
+    <section className="mt-10">
       <div className="container-fluid">
         <div className="row">
           <div className="col-md-12">
