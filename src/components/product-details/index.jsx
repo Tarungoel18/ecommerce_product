@@ -9,9 +9,12 @@ const ProductDetails = ({ product, setShowSizeGuide }) => {
         <div className="product-desc d-dsk">
           <h3>{product?.name}</h3>
 
-          <p className="text-black">
-            {product?.short_description.replace(/<\/?p>/g, "")}
-          </p>
+          <div
+            className="text-black"
+            dangerouslySetInnerHTML={{
+              __html: product?.short_description || "",
+            }}
+          />
           <div className="price mt-30">
             <p>
               <span className="text-black">{product?.price}</span> &nbsp;{" "}

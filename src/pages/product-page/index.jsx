@@ -6,7 +6,11 @@ import ProductDetailsMobile from "../../components/product-details-mobile";
 import AccordianParent from "../../components/accordian-parent";
 import { useState, useEffect } from "react";
 import { getProduct } from "./services/getProduct";
+import { useParams } from "react-router-dom";
+import BreadCrumbs from "../../components/breadcrumbs";
+import { breadcrumbItems } from "../../constants/AppConst";
 const ProductPage = () => {
+  const params = useParams();
   const [product, setProduct] = useState(null);
   const [loading, setIsLoading] = useState(true);
   const [showSizeGuide, setShowSizeGuide] = useState(false);
@@ -16,7 +20,7 @@ const ProductPage = () => {
     async function getProductDetails() {
       try {
         var bodyFormData = new FormData();
-        bodyFormData.append("product_id", "88");
+        bodyFormData.append("product_id", params?.id);
         setIsLoading(true);
         const product = await getProduct(bodyFormData);
         setProduct(product.data.product);
@@ -42,10 +46,17 @@ const ProductPage = () => {
 
   return (
     <>
+      <div id="header_mobile_inner_ct" className="d-mbl"></div>
+      <div id="header" className="d-dsk"></div>
+
+      <div className="clearfix"></div>
+      <div className="d-flex justify-content-between align-items-center px-4">
+        <BreadCrumbs items={breadcrumbItems} />
+      </div>
       <section className="products-main">
         <div className="container-fluid">
           <div className="row">
-            <ProductImages url={product?.images[0]?.src} />
+            <ProductImages images={product?.images} />
             <ProductDetails
               product={product}
               setShowSizeGuide={setShowSizeGuide}
@@ -107,18 +118,19 @@ const ProductPage = () => {
       <div className="clearfix"></div>
 
       <AddToCart product={product} />
-
-      <SizeGuide
-        isOpen={showSizeGuide}
-        onClose={() => setShowSizeGuide(false)}
-        onOpenFullGuide={() => {
-          setShowSizeGuide(false);
-          setShowFullSizeGuide(true);
-        }}
-        onCloseFullGuide={() => setShowFullSizeGuide(false)}
-        showFullSizeGuide={showFullSizeGuide}
-        setShowSizeGuide={setShowSizeGuide}
-      />
+      {showSizeGuide && (
+        <SizeGuide
+          isOpen={showSizeGuide}
+          onClose={() => setShowSizeGuide(false)}
+          onOpenFullGuide={() => {
+            setShowSizeGuide(false);
+            setShowFullSizeGuide(true);
+          }}
+          onCloseFullGuide={() => setShowFullSizeGuide(false)}
+          showFullSizeGuide={showFullSizeGuide}
+          setShowSizeGuide={setShowSizeGuide}
+        />
+      )}
     </>
   );
 };

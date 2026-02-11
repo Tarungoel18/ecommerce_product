@@ -4,7 +4,7 @@ const SizeGuide = ({
   onOpenFullGuide,
   onCloseFullGuide,
   showFullSizeGuide,
-  setShowSizeGuide
+  setShowSizeGuide,
 }) => {
   if (!isOpen) return null;
   return (
