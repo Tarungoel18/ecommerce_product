@@ -1,29 +1,29 @@
-const AccordionItem = ({ id, heading, body }) => {
+const AccordionItem = ({ id, heading, body, isOpen, onToggle }) => {
   return (
     <div className="accordion-item">
-      <h2 className="accordion-header" id={`heading-${id}`}>
+      <h2 className="accordion-header">
         <button
-          className="accordion-button collapsed"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target={`#collapse-${id}`}
-          aria-expanded="false"
-          aria-controls={`collapse-${id}`}
+          className="accordion-button"
+          onClick={() => onToggle(id)}
+          style={{
+            background: "none",
+            border: "none",
+            width: "100%",
+            textAlign: "left",
+            padding: "15px",
+            cursor: "pointer",
+            fontWeight: "bold",
+          }}
         >
-          <b>{heading}</b>
+          {heading}
         </button>
       </h2>
 
-      <div
-        id={`collapse-${id}`}
-        className="accordion-collapse collapse"
-        aria-labelledby={`heading-${id}`}
-        data-bs-parent="#accordionExample"
-      >
-        <div className="accordion-body">
+      {isOpen && (
+        <div className="accordion-body" style={{ padding: "15px" }}>
           {body}
         </div>
-      </div>
+      )}
     </div>
   );
 };
